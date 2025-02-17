@@ -10,7 +10,7 @@ class AccountMounts : public PlayerScript
 public:
     AccountMounts() : PlayerScript("AccountMounts") { }
 
-    void OnLogin(Player* pPlayer)
+    void OnPlayerLogin(Player* pPlayer) override
     {
         if (sConfigMgr->GetOption<bool>("Account.Mounts.Enable", true))
         {
